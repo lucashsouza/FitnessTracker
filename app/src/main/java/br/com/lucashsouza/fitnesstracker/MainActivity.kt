@@ -12,7 +12,6 @@ import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import co.tiagoaguiar.fitnesstracker.R
 
 class MainActivity : AppCompatActivity() {
 
@@ -50,7 +49,8 @@ class MainActivity : AppCompatActivity() {
                 }
 
                 2 -> {
-                    // abrir uma outra activity
+                    val intent = Intent(this@MainActivity, TmbActivity::class.java)
+                    startActivity(intent)
                 }
             }
             Log.i("Teste", "clicou $id!!")
