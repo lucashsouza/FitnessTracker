@@ -63,7 +63,7 @@ class ListCalcActivity : AppCompatActivity(), OnListClickListener {
     override fun onLongClick(position: Int, calc: Calc) {
         AlertDialog.Builder(this)
             .setMessage(R.string.delete_message)
-            .setNegativeButton(R.string.cancel) { dialog, which -> }
+            .setNegativeButton(R.string.cancel) { _, _ -> }
             .setPositiveButton(android.R.string.ok) { dialog, which ->
                 Thread {
                     val app = application as App
